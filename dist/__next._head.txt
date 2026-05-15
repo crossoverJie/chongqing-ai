@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[5206,["/chongqing-ai/_next/static/chunks/0xn5~6ucyr-jl.js","/chongqing-ai/_next/static/chunks/0kedagjx~r8_o.js"],"ViewportBoundary"]
+3:I[5206,["/chongqing-ai/_next/static/chunks/0xn5~6ucyr-jl.js","/chongqing-ai/_next/static/chunks/0kedagjx~r8_o.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[79662,["/chongqing-ai/_next/static/chunks/0xn5~6ucyr-jl.js","/chongqing-ai/_next/static/chunks/0kedagjx~r8_o.js"],"IconMark"]
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"渝AI - 重庆人工智能社区"}],["$","meta","1",{"name":"description","content":"渝AI是一个非盈利的AI技术社区，致力于连接重庆AI从业者，推动本地人工智能生态发展"}],["$","meta","2",{"name":"keywords","content":"渝AI,重庆AI,人工智能,AI社区,重庆人工智能"}],["$","link","3",{"rel":"icon","href":"/chongqing-ai/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L5","4",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"dNIxaZJJ-NWMAgs7f8n_A"}

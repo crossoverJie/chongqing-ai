@@ -73,3 +73,6 @@
 {"timestamp":"04:32:01.877","source":"Browser","level":"ERROR","message":"uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization."}
 {"timestamp":"04:32:01.877","source":"Browser","level":"ERROR","message":"uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization."}
 {"timestamp":"04:32:01.877","source":"Browser","level":"ERROR","message":"uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization."}
+{"timestamp":"05:38:51.365","source":"Server","level":"ERROR","message":"Error: ENOENT: no such file or directory, scandir '/Users/chenjie/Documents/dev/github/chongqing-ai/my-app/app'"}
+{"timestamp":"05:38:51.367","source":"Server","level":"ERROR","message":"Error: ENOENT: no such file or directory, scandir '/Users/chenjie/Documents/dev/github/chongqing-ai/my-app/app'"}
+{"timestamp":"05:38:51.380","source":"Server","level":"WARN","message":"Error: Failed to persist Chrome DevTools workspace UUID. The Chrome DevTools Workspace needs to be reconnected after the next page reload."}

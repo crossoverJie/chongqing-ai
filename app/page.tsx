@@ -223,6 +223,7 @@ const sigs = [
 ];
 
 export default function Home() {
+  const [showWechatQR, setShowWechatQR] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -478,10 +479,38 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white border-0 px-8">
-                  <MessageCircle className="mr-2 w-5 h-5" />
-                  加入微信群
-                </Button>
+                <div className="relative inline-block">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white border-0 px-8"
+                    onMouseEnter={() => setShowWechatQR(true)}
+                    onMouseLeave={() => setShowWechatQR(false)}
+                    onClick={() => setShowWechatQR(!showWechatQR)}
+                  >
+                    <MessageCircle className="mr-2 w-5 h-5" />
+                    加入微信群
+                  </Button>
+                  {showWechatQR && (
+                    <div
+                      className="absolute left-1/2 -translate-x-1/2 bottom-full mb-4 z-50 animate-in fade-in zoom-in-95 duration-200"
+                      onMouseEnter={() => setShowWechatQR(true)}
+                      onMouseLeave={() => setShowWechatQR(false)}
+                    >
+                      <div className="bg-white rounded-2xl p-4 shadow-2xl shadow-black/30 border border-slate-200">
+                        <Image
+                          src="/chongqing-ai/community/yu-ai-wechat.png"
+                          alt="微信二维码"
+                          width={220}
+                          height={220}
+                          className="rounded-lg"
+                          priority
+                        />
+                        <p className="text-center text-slate-500 text-xs mt-2">扫一扫二维码，加入微信群</p>
+                      </div>
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-white" />
+                    </div>
+                  )}
+                </div>
                 <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white px-8">
                   <Calendar className="mr-2 w-5 h-5" />
                   参加活动

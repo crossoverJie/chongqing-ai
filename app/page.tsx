@@ -598,7 +598,7 @@ export default function Home() {
             </div>
 
             <p className="text-slate-600 text-sm">
-              © 2024 渝AI. 共建重庆AI生态
+              © 2026 渝AI. 共建重庆AI生态
             </p>
           </div>
         </div>

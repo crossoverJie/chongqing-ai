@@ -224,6 +224,7 @@ const sigs = [
 
 export default function Home() {
   const [showWechatQR, setShowWechatQR] = useState(false);
+  const [showWechatAccountQR, setShowWechatAccountQR] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -250,9 +251,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">渝</span>
-              </div>
+              <Image
+                src="/chongqing-ai/community/yu-ai-logo.png"
+                alt="渝AI Logo"
+                width={40}
+                height={40}
+                className="rounded-xl"
+              />
               <span className="text-xl font-bold gradient-text">渝AI</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
@@ -464,7 +469,7 @@ export default function Home() {
       {/* Join Section */}
       <section id="contact" className="relative py-24 sm:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="glass-strong p-8 sm:p-12 text-center relative overflow-hidden">
+          <Card className="glass-strong p-8 sm:p-12 text-center relative">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
             <div className="relative z-10">
               <Badge className="mb-6 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-300 border-0">
@@ -496,16 +501,16 @@ export default function Home() {
                       onMouseEnter={() => setShowWechatQR(true)}
                       onMouseLeave={() => setShowWechatQR(false)}
                     >
-                      <div className="bg-white rounded-2xl p-4 shadow-2xl shadow-black/30 border border-slate-200">
+                      <div className="bg-white rounded-2xl p-6 shadow-2xl shadow-black/30 border border-slate-200 w-96">
                         <Image
                           src="/chongqing-ai/community/yu-ai-wechat.png"
                           alt="微信二维码"
-                          width={220}
-                          height={220}
-                          className="rounded-lg"
+                          width={320}
+                          height={320}
+                          className="rounded-lg max-w-full h-auto"
                           priority
                         />
-                        <p className="text-center text-slate-500 text-xs mt-2">扫一扫二维码，加入微信群</p>
+                        <p className="text-center text-slate-500 text-sm mt-3">扫一扫二维码，加入微信群</p>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-white" />
                     </div>
@@ -518,8 +523,41 @@ export default function Home() {
               </div>
 
               <div className="grid sm:grid-cols-3 gap-6 text-left">
+                <div
+                  className="relative flex items-center gap-3 p-4 rounded-xl bg-slate-800/50 cursor-pointer"
+                  onMouseEnter={() => setShowWechatAccountQR(true)}
+                  onMouseLeave={() => setShowWechatAccountQR(false)}
+                  onClick={() => setShowWechatAccountQR(!showWechatAccountQR)}
+                >
+                  <div className="w-10 h-10 rounded-lg bg-slate-700/50 flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <div className="text-slate-500 text-xs">微信公众号</div>
+                    <div className="text-slate-200 text-sm font-medium">渝AI</div>
+                  </div>
+                  {showWechatAccountQR && (
+                    <div
+                      className="absolute left-1/2 -translate-x-1/2 bottom-full mb-4 z-50 animate-in fade-in zoom-in-95 duration-200"
+                      onMouseEnter={() => setShowWechatAccountQR(true)}
+                      onMouseLeave={() => setShowWechatAccountQR(false)}
+                    >
+                      <div className="bg-white rounded-2xl p-6 shadow-2xl shadow-black/30 border border-slate-200 w-72">
+                        <Image
+                          src="/chongqing-ai/community/yu-ai-wechat-account.png"
+                          alt="微信公众号二维码"
+                          width={256}
+                          height={256}
+                          className="rounded-lg max-w-full h-auto"
+                          priority
+                        />
+                        <p className="text-center text-slate-500 text-sm mt-3">扫一扫关注微信公众号</p>
+                      </div>
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-white" />
+                    </div>
+                  )}
+                </div>
                 {[
-                  { icon: MessageCircle, label: "微信公众号", value: "渝AI" },
                   { icon: MapPin, label: "地点", value: "重庆" },
                   { icon: Mail, label: "联系邮箱", value: "hello@yu-ai.cn" },
                 ].map((item, i) => (
@@ -544,10 +582,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">渝</span>
-              </div>
-              <span className="text-lg font-bold gradient-text">渝AI</span>
+              <Image
+                src="/chongqing-ai/community/yu-ai-logo.png"
+                alt="渝AI Logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
             </div>
 
             <div className="flex items-center gap-6">
